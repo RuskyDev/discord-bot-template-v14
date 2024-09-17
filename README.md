@@ -4,7 +4,7 @@ A highly advanced Discord bot template featuring event handling and command hand
 # ✨ Features
 - Event Handling
 - Command Handling (Prefix + Slash Commands)
-- Cooldown Handler
+- Cooldown Handling
 - Easy-to-Read Code & Highly Optimized
 
 # 📃 Templates
