@@ -35,7 +35,7 @@ module.exports = {
 ```
 Example Event:
 ```js
-// This is an example event, modify it to suit your needs. This is just a boilerplate.
+// This is a sample event template. Customize it according to your specific requirements.
 
 module.exports = {
     name: 'messageCreate',
