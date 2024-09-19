@@ -17,7 +17,7 @@ module.exports = {
             const expirationTime = timestamps.get(interaction.user.id) + cooldownAmount;
             if (now < expirationTime) {
                 const timeLeft = Math.ceil((expirationTime - now) / 1000);
-                return interaction.reply({ content: `Please wait **${timeLeft}** more second(s) before reusing the **${command.data.name}** command.`, ephemeral: true });
+                return interaction.reply({ content: `Please wait **${timeLeft}** more second(s) before reusing the **/${command.data.name}** command.`, ephemeral: true });
             }
         }
 
