@@ -1,6 +1,8 @@
 module.exports = {
     name: 'messageCreate',
     async execute(message, client) {
+        const prefix = process.env.PREFIX
+
         if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
 
         const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
@@ -24,13 +26,13 @@ module.exports = {
 
                 if (message.cooldownMessage) {
                     try {
-                        await message.cooldownMessage.edit(`Please wait **${timeLeft}** more second(s) before reusing the **${command.name}** command.`);
+                        await message.cooldownMessage.edit(`Please wait **${timeLeft}** more second(s) before reusing the **${prefix}${command.name}** command.`);
                     } catch (error) {
                         return
                     }
                 } else {
                     try {
-                        const cooldownMessage = await message.reply(`Please wait **${timeLeft}** more second(s) before reusing the **${command.name}** command.`);
+                        const cooldownMessage = await message.reply(`Please wait **${timeLeft}** more second(s) before reusing the **${prefix}${command.name}** command.`);
                         message.cooldownMessage = cooldownMessage;
                     } catch (error) {
                         return

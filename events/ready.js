@@ -1,7 +1,9 @@
-const { REST, Routes } = require('discord.js');
+const { REST, Routes, ActivityType, GuildPresences } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
+
+const { TOKEN, ACTIVITY_NAME, ACTIVITY_STATUS, ACTIVITY_TYPE } = process.env;
 
 module.exports = {
     name: 'ready',
@@ -29,5 +31,10 @@ module.exports = {
         } catch (error) {
             console.error(error);
         }
+
+        client.user.setPresence({
+            activities: [{ name: process.env.ACTIVITY_NAME, type: ActivityType[process.env.ACTIVITY_TYPE] }],
+            status: ACTIVITY_STATUS,
+        });
     },
 };

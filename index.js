@@ -1,8 +1,8 @@
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, ActivityType, GuildPresences } = require('discord.js');
 const fs = require('fs');
 require('dotenv').config();
 
-const { TOKEN, CLIENT_ID, PREFIX } = process.env;
+const { TOKEN, CLIENT_ID, PREFIX, ACTIVITY_NAME, ACTIVITY_STATUS, ACTIVITY_TYPE } = process.env;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
