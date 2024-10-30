@@ -1,13 +1,12 @@
 # Discord Bot Template (v14)
 A highly advanced Discord bot template featuring event handling and command handling with both prefix and slash commands.
 
-# ✨ Features
+## Features
 - Event Handling
 - Command Handling (Prefix + Slash Commands)
 - Cooldown Handling
-- Easy-to-Read Code & Highly Optimized
 
-# 📃 Templates
+## Templates
 Example Slash Command:
 ```js
 const { SlashCommandBuilder } = require('@discordjs/builders');
@@ -46,13 +45,6 @@ module.exports = {
     },
 };
 ```
-# ☕ Buy Me a Coffee
-If you appreciate the work and want to support it, consider [buying me a coffee](https://buymeacoffee.com/ruskydev):
 
-
-# Made with ❤️ by:
-- RuskyDev (Lead Developer)
-- ChatGPT 4o-mini (Code Assistance and Debugging)
-
-
-
+## Contributions & Bug Reports
+If you encounter any bugs, feel free to open an [issue](https://github.com/RuskyDev/discord-bot-template-v14/issues) or join my [Discord server](https://discord.gg/MAnvhWJvsC) and Contributions are welcome! Be sure to check out the [issues](https://github.com/RuskyDev/discord-bot-template-v14/issues) tab for ways to help.
