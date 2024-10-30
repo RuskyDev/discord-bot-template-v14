@@ -1,15 +1,12 @@
-const { REST, Routes, ActivityType, GuildPresences } = require('discord.js');
+const { REST, Routes, ActivityType } = require('discord.js');
 const fs = require('fs');
-const path = require('path');
 require('dotenv').config();
-
-const { TOKEN, ACTIVITY_NAME, ACTIVITY_STATUS, ACTIVITY_TYPE } = process.env;
 
 module.exports = {
     name: 'ready',
     once: true,
     async execute(client) {
-        console.log(`[Bot]: Logged in as ${client.user.tag}`);
+        console.log(`Logged in as ${client.user.tag}`);
 
         const commands = [];
         const commandFiles = fs.readdirSync('./commands/slash').filter(file => file.endsWith('.js'));
@@ -27,14 +24,14 @@ module.exports = {
                 { body: commands },
             );
 
-            console.log('[Bot]: Successfully registered global application commands.');
+            console.log('Successfully registered global application commands.');
         } catch (error) {
             console.error(error);
         }
 
         client.user.setPresence({
             activities: [{ name: process.env.ACTIVITY_NAME, type: ActivityType[process.env.ACTIVITY_TYPE] }],
-            status: ACTIVITY_STATUS,
+            status: process.env.ACTIVITY_STATUS,
         });
     },
 };
