@@ -1,18 +1,13 @@
 {
   "name": "discord-bot-template",
-  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js"
   },
-  "author": "RuskyDev",
-  "license": "MIT",
-  "description": "",
   "dependencies": {
-    "discord-bot-template": "file:",
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",
-    "sqlite3": "^5.1.7"
+    "upgrade": "^1.1.0"
   }
 }
