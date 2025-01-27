@@ -48,7 +48,7 @@ module.exports = {
     },
 };
 ```
-.env Format:
+Example .env File:
 ```bash
 TOKEN=
 CLIENT_ID=
