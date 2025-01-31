@@ -14,7 +14,7 @@ const settings = {
     ACTIVITY_TEXT: "with /help",
     ACTIVITY_TYPE: "Playing", // Options: Playing, Listening, Competing, Watching
     ACTIVITY_STATUS: "Online", // Options: Idle, Online, DoNotDisturb, Invisible
-    ACTIVITY_MOBILE_ONLINE_STATUS: true, // This will set your bot status to "Mobile Online" (Make sure ACTIVITY_STATUS is set to "Online" or it won't work)
+    ACTIVITY_MOBILE_ONLINE_STATUS: false, // This will set your bot status to "Mobile Online" (Make sure ACTIVITY_STATUS is set to "Online" or it won't work)
 };
 
 module.exports = settings;
