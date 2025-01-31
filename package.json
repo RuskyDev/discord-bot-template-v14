@@ -1,11 +1,9 @@
 {
-  "name": "discord-bot-template",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "staging": "nodemon ./index.js",
+    "production": "./index.js"
   },
-  "author": "RuskyDev",
-  "license": "MIT",
   "dependencies": {
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",

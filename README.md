@@ -1,11 +1,12 @@
 # Discord Bot Template
-An advanced template for Discord bots with event handling, prefix and slash commands, user app support, and cooldown management.
+An advanced template for Discord bots with event handling, prefix and slash commands, user app support, cooldown management, and many customization options.
 
 ## Features  
 - Easy event handling  
 - Works with prefix and slash commands  
 - Supports user apps  
 - Manages cooldowns efficiently  
+- A lot of customization options for different bot functionalities
 
 ## Templates
 Example Slash Command:
@@ -50,14 +51,9 @@ module.exports = {
 ```
 Example .env File:
 ```bash
-TOKEN=
-CLIENT_ID=
-PREFIX=!
-
-ACTIVITY_NAME=with /help
-ACTIVITY_TYPE=PLAYING
-ACTIVITY_STATUS=online
+DISCORD_BOT_TOKEN=
+DISCORD_BOT_CLIENT_ID=
 ```
 
 ## Contributions & Bug Reports
-If you encounter any bugs, feel free to open an [issue](https://github.com/RuskyDev/discord-bot-template-v14/issues) or join my [Discord server](https://discord.gg/MAnvhWJvsC) and Contributions are welcome! Be sure to check out the [issues](https://github.com/RuskyDev/discord-bot-template-v14/issues) tab for ways to help.
+If you encounter any bugs, feel free to open an [issue](https://github.com/RuskyDev/discord-bot-template/issues) or join my [Discord server](https://discord.gg/MAnvhWJvsC). Contributions are welcome! Be sure to check out the [issues](https://github.com/RuskyDev/discord-bot-template/issues) tab for ways to help.

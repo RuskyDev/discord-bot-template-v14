@@ -1,14 +1,27 @@
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const fs = require('fs');
 require('dotenv').config();
+const settings = require('./settings');
 
-const { TOKEN } = process.env;
-
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+const client = new Client({ 
+    intents: [
+        GatewayIntentBits.Guilds, 
+        GatewayIntentBits.GuildMessages, 
+        GatewayIntentBits.MessageContent
+    ] 
+});
 
 client.commands = new Collection();
 client.prefixCommands = new Collection();
 client.cooldowns = new Collection();
+
+if (settings.ACTIVITY_MOBILE_ONLINE_STATUS && settings.ACTIVITY_STATUS === "Online") {
+    const { 
+        DefaultWebSocketManagerOptions: { identifyProperties } 
+    } = require("@discordjs/ws");
+
+    identifyProperties.browser = "Discord Android";
+}
 
 const commandFolders = fs.readdirSync('./commands');
 for (const folder of commandFolders) {
@@ -33,4 +46,4 @@ for (const file of eventFiles) {
     }
 }
 
-client.login(TOKEN);
+client.login(process.env.DISCORD_BOT_TOKEN);

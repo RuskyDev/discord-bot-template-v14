@@ -1,11 +1,13 @@
+const settings = require("../settings");
+
 module.exports = {
     name: 'messageCreate',
     async execute(message, client) {
-        const prefix = process.env.PREFIX
+        const prefix = settings.PREFIX
 
-        if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
+        if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-        const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
+        const args = message.content.slice(prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
 
         const command = client.prefixCommands.get(commandName);
